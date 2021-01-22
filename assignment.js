@@ -1,6 +1,6 @@
 // https://github.com/zakir-hosen/assignment3
 
-//kilometerToMeter
+//kilometerToMeter function
 function kilometerToMeter (kiloMeter) {
     var input = kiloMeter;
     var result = input * 1000;
@@ -12,7 +12,9 @@ function kilometerToMeter (kiloMeter) {
 }
  kilometerToMeter();
 
-//budgetCalculator
+
+//budgetCalculator funciton
+
 function budgetCalculator (wQuantity, mQuantity, lQuantity ) {
     var  watch_price = 50;
     var  mobile_price = 100;
@@ -26,7 +28,8 @@ function budgetCalculator (wQuantity, mQuantity, lQuantity ) {
  budgetCalculator(3,3,3);
  
 
-//hotelCost
+//hotelCost function
+
 function hotelCost (dayCount) 
 {
     var totalCost = 0;
@@ -55,7 +58,7 @@ function hotelCost (dayCount)
 
  hotelCost();
 
-//megaFriends
+//megaFriends function
 
 function megaFriends (friends = ["akash", "hasibul hasan" ,"salman", "shanto", "roni", "sabbir"] )
  {
