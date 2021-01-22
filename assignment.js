@@ -1,60 +1,63 @@
+// https://github.com/zakir-hosen/assignment3
+
 //kilometerToMeter
-
 function kilometerToMeter (kiloMeter) {
-    let input = kiloMeter;
-    let result = input * 1000;
+    var input = kiloMeter;
+    var result = input * 1000;
+    var errorMessage = "Negetive value is not allowed";
+    if ( input < 0) {
+        return  errorMessage;
+    }
     return result;
 }
-var conversion = kilometerToMeter(10);
-console.log(conversion);
+ kilometerToMeter();
+
 //budgetCalculator
-
 function budgetCalculator (wQuantity, mQuantity, lQuantity ) {
-    let  watch_price = 50;
-    let  mobile_price = 100;
-    let  laptop_price = 200;
-    let a = watch_price * wQuantity;
-    let b = mobile_price * mQuantity;
-    let c = laptop_price * lQuantity;
-
-    var  result = a + b + c;
+    var  watch_price = 50;
+    var  mobile_price = 100;
+    var  laptop_price = 200;
+    var watchValue = watch_price * wQuantity;
+    var mobileValue = mobile_price * mQuantity;
+    var laptopValue = laptop_price * lQuantity;
+    var  result = watchValue + mobileValue +  laptopValue;
     return result;
 }
-var akash = budgetCalculator(1,1,2);
-console.log(akash);
-
+ budgetCalculator(3,3,3);
+ 
 
 //hotelCost
-function hotelCost (dayCount) {
-
-
-    var vara = 0;
+function hotelCost (dayCount) 
+{
+    var totalCost = 0;
+    var errorMessage = "Negetive value is not allowed";
     if (dayCount <= 10) {
-        vara = dayCount * 100;
+        totalCost = dayCount * 100;
     } else if ( dayCount <= 20) {
         var firstPart=   10 * 100;
         var remaining =  dayCount - 10;
         var secondPart = remaining * 80;
-        vara = firstPart + secondPart; 
+        totalCost = firstPart + secondPart; 
+    }else  {
+        var firstPart= 10 * 100;
+        var secondPart = 10 * 80;
+        var remaining = dayCount - 20;
+        var thirdPart = remaining * 50;
+        totalCost =  firstPart + secondPart + thirdPart;
     }
-     else if (dayCount.match(/^-\d+$/) {
-        // var firstPart=   10 * 100;
-        // var secondPart = remaining * 80;
-        // var remaining = dayCount - 20;
-        // var thirdPart = remaining * 50;
-        // vara =  firstPart + secondPart + thirdPart;
-       
-        console.log("nothing");
-    }
-    return vara;
 
+    if (dayCount < 0 ) {
+        return  errorMessage;
+    }
+
+    return totalCost;
 }
-var totalCost = hotelCost(30);
-console.log(totalCost);
- 
-//mgFriends
 
-function megaFriends (friends = ["akash", "ajsdflkasdjfalsdjfasldkjfldk" ,"salman", "shantoPakna", "ronibolod", "sabbirbuka"] )
+ hotelCost();
+
+//megaFriends
+
+function megaFriends (friends = ["akash", "hasibul hasan" ,"salman", "shanto", "roni", "sabbir"] )
  {
     var max = friends[0];
     for (var i = 0; i < friends.length; i++)
@@ -66,6 +69,7 @@ function megaFriends (friends = ["akash", "ajsdflkasdjfalsdjfasldkjfldk" ,"salma
     }
     return max;
 }
-var largestName = megaFriends();
-console.log(largestName)
+
+megaFriends();
+
 
